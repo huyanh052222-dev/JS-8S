@@ -42,6 +42,7 @@ body {
   border-radius: 50%;
   position: relative;
   transition: transform 0.5s linear;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .container-wrap.show-nav .circle {
@@ -261,4 +262,18 @@ nav a:hover {
     background-color: var(--line-border-none-color);
     cursor: not-allowed;
     color: #999;
+}
+
+
+.content-img {
+  display: none;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.content-img img {
+  width: 400px;
+  border-radius: 15px;
+  box-shadow: 8px 10px 15px rgba(0, 0, 0, 0.1),
+              -8px -8px 15px rgba(255, 255, 255, 0.5);
 }

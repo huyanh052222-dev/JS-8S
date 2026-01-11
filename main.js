@@ -49,6 +49,7 @@ function update() {
         next.innerText = "Done";
         next.disabled = false; 
         prev.disabled = false;
+        showImg();
     } else {
         prev.disabled = false;
         next.disabled = false;
@@ -76,3 +77,24 @@ prev.addEventListener('click', () => {
     }
     update();
 });
+
+
+function showImg() {
+    const imgContainer = document.querySelector('.content-img');
+    imgContainer.style.display = 'flex';
+    fadeIn();
+}
+
+function fadeIn() {
+    const img = document.querySelector('.content-img img');
+    let opacity = 0;
+    img.style.opacity = opacity;
+    const interval = setInterval(() => {
+        if (opacity < 1) {
+            opacity += 0.1;
+            img.style.opacity = opacity;
+        } else {
+            clearInterval(interval);
+        }
+    }, 30);
+}
